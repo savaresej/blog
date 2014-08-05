@@ -2,12 +2,6 @@ Rails.application.routes.draw do
   
 root 'welcome#index'
 
-  get 'sitemapping/sitemap'
-
-  get 'aboutme/about'
-
-  get 'sitemap/index'
-
   get 'welcome' => 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
