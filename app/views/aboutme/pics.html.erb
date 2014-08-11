@@ -1,0 +1,37 @@
+<p>pics!</p>
+
+
+<% myName = "Joe" %>
+<p><%=myName%></p>
+
+
+
+<% monoURL = "http://www.blessthisstuff.com/imagens/stuff/img_bac_mono_car_3.jpg" %>
+
+<p> </p>
+
+
+<% count = 1 %>
+<% 1.upto(100).each do |i| %>
+	 <img src = "<%= monoURL %>" style="width: <%= i %>px;">
+
+<%end%>
+
+
+<% @imgData.each do |description, imageUrl| %>
+
+	 	<a href = "<%= imageUrl[1] %>">
+	 		<%= image_tag(imageUrl[0]) %>
+	 	</a>
+	 	
+	 	<p> <%= description %> </p>
+
+
+<%end%>
+
+<%= image_tag('1750191.jpg') %>
+
+
+
+
+
