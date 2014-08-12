@@ -18,12 +18,12 @@
 <%end%>
 
 
-<% @imgData.each do |description, imageUrl| %>
+<% @imgData.each do |description, url| %>
 
-	 	<a href = "<%= imageUrl[1] %>">
-	 		<%= image_tag(imageUrl[0]) %>
+	 	<a href = "<%= image_url(url) %>">
+	 		<%= image_tag(url) %>
 	 	</a>
-	 	
+
 	 	<p> <%= description %> </p>
 
 

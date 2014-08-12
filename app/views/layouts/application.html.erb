@@ -6,6 +6,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<H1>
+	SuperMegaUltraBlogThing!
+</H1>
+<p> First Visit: <%= @first_visit%> </p>
+<hr/>
 <body>
 
 <%= yield %>
@@ -13,6 +18,7 @@
 
 </body>
 </html>
+<hr/>
 <center>
 <%= link_to('| About Me! |', '/aboutme/') %>
 <%= link_to('| Home Page! |', '/welcome/') %>
