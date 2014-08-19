@@ -14,7 +14,9 @@
 </head>
 <center><a href="#section5"> Go to bottom of the page! </a><p><b>Joe Savarese</b></p>
 
-<h1>Joe Savarese</h1>
+<h1>Joe Savarese
+<p> Message: <%= @message%> </p>
+</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
 <p>Hi Joe. Welcome to your site.</p>
 <p>My name is Joe. I live in Atlanta. I work in IT Sales. Fun things are fun.</p>
@@ -26,8 +28,45 @@
 <ul>
   <li>First Item!</li>
   <li>Second Item!</li> 
+
+<form action="/set_name" method="POST">
+		
+	<p>Enter your name to customize the page!</p> -->
+	
+	<input 
+	type="textfield" 
+	name="user_name"
+	value=""
+	/>
+
+	<input
+	type="submit"
+	value="Customize"
+	/>
+	<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token%>"/>
+</form>
+<form action="/set_background_color/" method="POST">
+
+	<p>Select your desired theme color using the dropdown box below!</p> -->
+
+	<select name = "background_color">
+		<option value = "normal">Normal</option>
+		<option value = "red">Red</option>
+		<option value = "green">Green</option>
+		<option value = "blue">Blue</option>
+		<option value = "purple">Purple</option>
+	<input
+	type="submit"
+	value="Change Theme"
+	/>
+	</select>
+
+	
+	<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token%>"/>
+</form>
+
 </ul>
-<a href = "http://www.google.com">Click here to go!</a>
+<a href = "http://www.google.com">Click here to Google!</a>
 <p></p>
 
 

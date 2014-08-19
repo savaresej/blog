@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
   
+  get 'memorygame/index'
+
 root 'welcome#index'
 
   get 'aboutme' => 'aboutme#index'
   get 'sitemap' => 'sitemap#index'
   get 'welcome' => 'welcome#index'
   get 'aboutme/pics' => 'aboutme#pics'
+  get 'memorygame' => 'memorygame#index'
+  get 'memorygame/test' => 'memorygame#test'
+
+  post 'set_name' => 'welcome#set_name'
+  post 'set_background_color' => 'welcome#set_background_color'
+  get 'set_background_color' => 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -6,21 +6,42 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <H1>
 	SuperMegaUltraBlogThing!
 </H1>
 <p> First Visit: <%= @first_visit%> </p>
+<p> Message: <%= @message%> </p>
 <hr/>
-<body>
+	<body>
+		<% if @background_color == 'red' %>
+			<body style= "background-color: red"> <body text= "990000">
+		<% elsif @background_color == 'green' %>
+			<body style= "background-color: green"; text= "339900">
+		<% elsif @background_color == 'purple' %>
+			<body style= "background-color: purple"; text= "339900">
+		<% elsif @background_color == 'blue' %>
+			<body style= "background-color: blue"; text= "339900">
+		<% elsif @background_color == 'normal' %>
+		<%end%>
 
 <%= yield %>
 
+	</body>
 
-</body>
-</html>
 <hr/>
 <center>
 <%= link_to('| About Me! |', '/aboutme/') %>
 <%= link_to('| Home Page! |', '/welcome/') %>
 <%= link_to('| Pictures! |', '/aboutme/pics/') %>
+<%= link_to('| Memory Game! |', '/memorygame/') %>
+<p> Last Visit: <%= @last_visit%> </p>
+
+<% if @user_name == nil %>
+	<p> Thanks for visting us!</p>
+<% else %>
+	<p> Thanks for visiting us, <%= @user_name %>! </p>
+<% end %>
+<p> Theme:  <%= @background_color.capitalize %>!</p>
 </center>
+</html>

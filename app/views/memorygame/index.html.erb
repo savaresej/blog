@@ -1,0 +1,30 @@
+<center>
+<h1>Memory Game!</h1>
+<p>Find me in app/views/memorygame/index.html.erb</p>
+
+<%if @game_controller = 0 %>
+<div>
+	<table style = "width:300px">
+
+		<tr>
+			<td><%= image_tag(@photo_array['frog'][1], size: "100")%> <p><%= @photo_array['frog'][0] %></td>
+			<td><%= image_tag(@photo_array['antelope'][1], size: "100")%> <p><%= @photo_array['antelope'][0] %></td>
+		</tr>
+		<tr>
+			<td><%= image_tag(@photo_array['tiger'][1], size: "100")%> <p><%= @photo_array['tiger'][0] %></td>
+			<td><%= image_tag(@photo_array['kitten'][1], size: "100")%> <p><%= @photo_array['kitten'][0] %></td>
+		</tr>
+
+
+	</table>
+</div>	
+
+<div style="margin-left: 100px"> <%= link_to("Begin Test!", "/memorygame/test") %></div>
+
+<% elsif @game_counter <= 4 %>
+	<% image_array = @photo_array.sample %>
+	<%= image_tag(image_array[1]) %>
+	<%= image_array[0] %>
+<% end %>
+
+</center>
