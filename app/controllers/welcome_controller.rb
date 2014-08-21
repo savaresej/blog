@@ -23,7 +23,7 @@ class WelcomeController < ApplicationController
 	end
 
 	def set_background_color
-	 		@background_color = params['background_color']
+	 		@background_color = params['background_color'].capitalize
 	 		session['background_color'] = @background_color
 	end
 

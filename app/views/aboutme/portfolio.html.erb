@@ -1,0 +1,11 @@
+<center><h3> <u>WELCOME</u> <i>TO</i> <b>PORTFOLIO</b> </h3></center> 
+
+<% @projects.each do |item| %>
+	<p>Name: <%= item.name %>
+	<p>Description: <%= item.description %></p>
+	<p>Github Link: <%= item.githu_link %></p>
+	<p>Heroku Link: <%= item.heroku_link %></p>
+	<p>Picture: <%= item.picture %></p>
+
+	<br>
+<% end %>

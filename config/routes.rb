@@ -10,6 +10,7 @@ root 'welcome#index'
   get 'aboutme/pics' => 'aboutme#pics'
   get 'memorygame' => 'memorygame#index'
   get 'memorygame/test' => 'memorygame#test'
+  get 'portfolio' => 'aboutme#portfolio'
 
   post 'set_name' => 'welcome#set_name'
   post 'set_background_color' => 'welcome#set_background_color'
