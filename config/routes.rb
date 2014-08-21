@@ -13,7 +13,11 @@ root 'welcome#index'
 
   post 'set_name' => 'welcome#set_name'
   post 'set_background_color' => 'welcome#set_background_color'
-  get 'set_background_color' => 'welcome#index'
+  post 'memory_game_1' => 'memorygame#memory_game_1'
+  post 'memory_game_2' => 'memorygame#memory_game_2'
+  post 'memory_game_3' => 'memorygame#memory_game_3'
+  post 'memory_game_4' => 'memorygame#memory_game_4'
+  post 'memory_game_5' => 'memorygame#memory_game_5'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

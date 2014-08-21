@@ -1,0 +1,22 @@
+<center>
+
+	<%= @image %>
+	<p> Please use the drop down box to guess the image's location.</p>
+	<%= image_tag('frog.jpg', size: "100")%>
+<form action="/memory_game_2/" method="POST">
+
+	<p>Select your desired theme color using the dropdown box below!</p> -->
+	<select name = "frog_guess">
+		<option value = "Upper Right">Upper Right</option>
+		<option value = "Upper Left">Upper Left</option>
+		<option value = "Lower Right">Lower Right</option>
+		<option value = "Lower Left">Lower Left</option>
+	<input
+	type="submit"
+	value="Submit"
+	/>
+	</select>
+
+	
+	<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token%>"/>
+</form>

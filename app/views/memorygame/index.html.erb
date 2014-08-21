@@ -19,7 +19,14 @@
 	</table>
 </div>	
 
-<div style="margin-left: 100px"> <%= link_to("Begin Test!", "/memorygame/test") %></div>
+<form action="/memory_game_1" method="POST">
+
+	<input
+	type="submit"
+	value="Begin Game!"
+	/>
+	<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token%>"/>
+</form>
 
 <% elsif @game_counter <= 4 %>
 	<% image_array = @photo_array.sample %>

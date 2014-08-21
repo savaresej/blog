@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   before_action :displayMessage
   before_action :setUserName
   before_action :setBackgroundColor
+  # before_action :memory_game
 
 # Display the user name based on the form at the bottom of the home page
 	def setUserName
